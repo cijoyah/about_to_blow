@@ -1,0 +1,66 @@
+#background {
+  background-image: url(https://download.unsplash.com/photo-1421217336522-861978fdf33a);
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
+  text-align: center;
+  header {
+    padding: 3rem 0;
+    #logo {
+      float: left;
+      text-transform: uppercase;
+      font-weight: 700;
+      color: white;
+      text-decoration: none;
+    }
+    nav {
+      float: right;
+      ul {
+        list-style: none;
+        margin: 0;
+        li {
+          display: inline;
+          margin-left: 2.5rem;
+          a {
+            color: white;
+            text-decoration: none;
+          }
+        }
+      }
+    }
+  }
+  .tag_line {
+      color: white;
+      font-size: 3.5rem;
+      font-weight: 300;
+      letter-spacing: 2px;
+      word-spacing: 5px;
+      margin: 8rem 0 2rem 0;
+  }
+  .button {
+  color: white;
+  text-decoration: none;
+  font-size: 1rem;
+  padding: 1rem 2rem;
+  border-radius: 2rem;
+  outline: none;
+  border-color: none;
+  margin: 1.5rem 2.5% 0 2.5%;
+  display: inline-block;
+  min-width: 4.8rem;
+  }
+  .button_highlight {
+    background: blue;
+    &:hover {
+      background: darken(blue, 5%);
+    }
+  }
+  .button_white {
+    background: white;
+    color: black;
+    &:hover {
+      background: darken(white, 5%);
+    } 
+  }
+}
+

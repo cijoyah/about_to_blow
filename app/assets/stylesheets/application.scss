@@ -13,3 +13,36 @@
  *= require_tree .
  *= require_self
  */
+ body {
+  font-family: 'Open Sans', sans-serif;
+ }
+
+.wrapper_wide {
+  width: 90%;
+  margin: 0 auto;
+}
+
+.wrapper {
+  width: 80%;
+  margin: 0 auto;
+}
+
+.wrapper_skinny {
+  width: 60%;
+  margin: 0 auto;
+}
+
+.cf:before,
+.cf:after {
+    content: " ";
+    display: table;
+} /*clearfix hack*/
+
+.cf:after {
+    clear: both;
+}/*clearfix hack*/
+
+
+
+@import 'normalize';
+@import 'home';
