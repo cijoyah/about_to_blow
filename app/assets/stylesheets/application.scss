@@ -13,6 +13,7 @@
  *= require_tree .
  *= require_self
  */
+ 
 body {
   font-family: 'Open Sans', sans-serif;
  }
@@ -44,13 +45,13 @@ body {
 
 /* Main nav for site */
 #main_nav {
-  background: white;
+  background: black;
   padding: 3rem 0;
   #logo {
     float: left;
     text-transform: uppercase;
     font-weight: 700;
-    color: black;
+    color: white;
     text-decoration: none;
   }
   nav {
@@ -62,7 +63,7 @@ body {
         display: inline;
         margin-left: 2.5rem;
         a {
-          color: black;
+          color: white;
           text-decoration: none;
         }
       }
