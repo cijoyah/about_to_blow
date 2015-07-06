@@ -12,6 +12,7 @@
   ul {
     padding-left: 0;
     margin: 0;
+  }
     li {
       list-style: none;
       width: 23%;
@@ -19,29 +20,29 @@
       margin: 0 1% 2rem 1%;
       background-color: grey;
     }
-  }
-    img {
-      width: 100%;
-      max-width: 100%;
-    }
-    .playlist_details {
-      padding: 1rem 7.5%;
-      .playlist_title {
-        margin: 0;
-        font-size: 1rem;
-        font-weight: 700;
-        color: black;
+      img {
+        width: 100%;
+        max-width: 100%;
       }
-      .date_posted {
-        color: black;
-        font-size: 1rem;
-        margin: .5rem 0 .25rem 0;
+      .playlist_details {
+        padding: 1rem 7.5%;
+        .playlist_title {
+          margin: 0;
+          font-size: 1rem;
+          font-weight: 700;
+          color: black;
+        }
+        .date_posted {
+          color: black;
+          font-size: 1rem;
+          margin: .5rem 0 .25rem 0;
+        }
       }
-    }
     &:hover {
       img {
         opacity: .9;
       }
     }
+}
 
 
