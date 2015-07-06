@@ -19,7 +19,19 @@
       float: left;
       margin: 0 1% 2rem 1%;
       background-color: grey;
-    }
+      &:hover {
+        img {
+          opacity: .5;
+        }
+        .playlist_details {
+          .playlist_title {
+            color: blue;
+          }
+          .date_posted {
+            color: pink;
+          } 
+        }
+      }
       img {
         width: 100%;
         max-width: 100%;
@@ -37,11 +49,7 @@
           font-size: 1rem;
           margin: .5rem 0 .25rem 0;
         }
-      }
-    &:hover {
-      img {
-        opacity: .9;
-      }
+      } 
     }
 }
 
