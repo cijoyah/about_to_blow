@@ -8,9 +8,19 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-  <p class="notice"><%= notice %></p>
-  <p class="alert"><%= alert %></p>
-  <%= yield %>
+
+<% if alert %>
+  <p class="notice">
+    <%= notice %>
+  </p>
+<% elsif notice %>
+  <p class="alert">
+    <%= alert %>
+  </p>
+<% end %>
+
+<%= yield %>
+
   <div class="pagination">
     <span class="previous_page disabled">Previous</span>
     <em class="current">1</em>
