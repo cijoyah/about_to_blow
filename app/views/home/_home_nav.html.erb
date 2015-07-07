@@ -8,9 +8,9 @@
           <li><%= link_to "Sign In", new_user_session_path %></li>
           <li><%= link_to "Sign Up", new_user_registration_path %></li>
         <% else %>
-          <li><a href="#">Explore</a></li>
+          <li><%= link_to "Explore", playlists_path %></li>
           <li><a href="#">Account</a></li>
-          <li><%= link_to "Sign Out", destroy_user_session_path %></li>
+          <li><%= link_to "Sign Out", destroy_user_session_path, :method => :delete %></li>
         <% end %>
       </ul>
     </nav>

@@ -4,19 +4,20 @@
   <title>_About_To_Blow</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag :defaults %>
   <link href='http://fonts.googleapis.com/css?family=Open+Sans:700,600,400' rel='stylesheet' type='text/css'>
   <%= csrf_meta_tags %>
 </head>
 <body>
 
 <% if alert %>
-  <p class="notice">
+  <div class="notice">
     <%= notice %>
-  </p>
+  </div>
 <% elsif notice %>
-  <p class="alert">
+  <div class="alert">
     <%= alert %>
-  </p>
+  </div>
 <% end %>
 
 <%= yield %>
