@@ -2,8 +2,7 @@ class PlaylistsController < ApplicationController
 
 
       def index
-        # very simple code to grab all posts so they can be
-        # displayed in the Index view (index.html.erb)
+        @playlists = Playlist.all.order('created_at DESC')
       end
 
       def show
