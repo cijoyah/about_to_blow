@@ -1,5 +1,7 @@
 class PlaylistsController < ApplicationController
 
+      before_action :find_user
+      before_action :find_playlist, only: [:show]
 
       def index
         @playlists = Playlist.all.order('created_at DESC')
@@ -11,15 +13,16 @@ class PlaylistsController < ApplicationController
       end
 
       def new
-        # very simple code to create an empty post and send the user
-        # to the New view for it (new.html.erb), which will have a
-        # form for creating the post
+        @playlist = @user.playlists.new
       end
 
       def create
-        # code to create a new post based on the parameters that
-        # were submitted with the form (and are now available in the
-        # params hash)
+        @playlist = @user.playlists.new playlist_params
+        if @playlist.save
+          redirect_to user_playlist_path(@user, @playlist)
+        else 
+          render 'new'
+        end
       end
 
       def edit
@@ -38,6 +41,20 @@ class PlaylistsController < ApplicationController
       def destroy
         # very simple code to find the post we're referring to and
         # destroy it.  Once that's done, redirect us to somewhere fun.
+      end
+
+      private
+
+      def playlist_params
+        params.require(:playlist).permit(:title, :description, :tracks, :last_updated)
+      end
+
+      def find_user
+        @user = User.find(params[:user_id])
+      end
+
+      def find_playlist
+        @playlist = Playlist.find(params[:id])
       end
 
 end
