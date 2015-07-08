@@ -3,7 +3,10 @@ Rails.application.routes.draw do
   devise_for :users
   root 'home#index'
 
-  resources :playlists
+  resources :users, only: [:index, :show] do
+    resources :playlists
+    
+  end
 
 
 
