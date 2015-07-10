@@ -29,42 +29,53 @@ body {
 }
 
 .wrapper_skinny {
-  width: 60%;
+  width: 70%;
   margin: 0 auto;
 }
 
+/*clearfix hack*/
 .cf:before,
 .cf:after {
-    content: " ";
+    content: "";
     display: table;
-} /*clearfix hack*/
-
+} 
 .cf:after {
     clear: both;
-}/*clearfix hack*/
+}
 
 /* Main nav for site */
 #main_nav {
-  background: black;
-  padding: 1.5rem 0;
+  background: #333;
+  position: fixed;
+  width: 100%;
+  // padding: 1.5rem 0;
   #logo {
     float: left;
     text-transform: uppercase;
     font-weight: 700;
     color: white;
     text-decoration: none;
+    background-color: #FF5A00;
+    display: inline;
+    padding: 1rem;
+    font-size: 1rem;
+    // margin-left: 11.108%;
   }
   nav {
     float: right;
     ul {
       list-style: none;
       margin: 0;
+      padding: 1rem;
       li {
         display: inline;
         margin-left: 2.5rem;
         a {
-          color: white;
+          color: #EEE;
           text-decoration: none;
+          &:hover {
+          color: #FF5A00;
+          }
         }
       }
     }

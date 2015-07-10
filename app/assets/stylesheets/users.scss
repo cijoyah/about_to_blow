@@ -1,3 +1,7 @@
+.background {
+  background-color: #F2F2F2;
+}
+
 #users {
   padding-bottom: 3rem;
   .page_title {
@@ -40,11 +44,12 @@
 }
 
 .user_show {
+  padding: 3rem 0;
+  background-color: white;
   .user_show_banner {
     background: grey;
     text-align: center;
-    padding: 2rem 0rem 2rem 0rem;
-    margin: 3rem 0 0 0;
+    padding: 1rem 0rem 2rem 0rem;
     .user_show_banner_name {
       font-size: 2.5rem;
       font-weight: 300;
@@ -58,7 +63,7 @@
       margin-top: 1.5rem;
       .user_show_banner_link {
         text-decoration: none;
-        font-size: 1rem; 
+        font-size: .7rem; 
         text-transform: uppercase;
         text-weight: 700;
         text-align: center;
@@ -77,15 +82,68 @@
   .breadcrumb {
     padding: 1rem 0;
     text-align: center;
-    border-bottom: 2px solid lighten(grey, 20%);
+    border-bottom: .5px solid lighten(grey, 20%);
     a {
       text-decoration: none; 
       font-weight: 700;
       font-size: .8rem;
       color: darken(grey, 20%);
+      &:hover {
+        text-decoration: underline;
+      }
     } 
     span {
       margin: 0 .5rem;
     }
   }
+  .user_show_playlists {
+    padding: 1rem 0 3rem;
+    ul {
+      list-style: none;
+      padding-left: 0;
+      margin: 0;
+      li {
+        padding: 1rem 1rem 0.8rem 1rem ;
+        margin-bottom: 0;
+        .playlist_thumbnail {
+          width: 20%;
+          float: left;
+          margin-right: 1.5%;
+          img {
+            width: 10rem;
+            max-width: 100%;
+          }
+        }
+        .playlist_overview {
+          width: 70%;
+          float: left;
+          h2 {
+            margin: 0;
+          }
+          .playlist_overview_title {
+            color: grey;
+            text-decoration: none;
+            font-size: 2rem;
+            margin: 0;
+          }
+          .playlist_overview_description {
+            padding: 0;
+
+          }
+        }
+        // &:hover {
+        //   background: #FF5A00;
+        //   .playlist_overview {
+            
+        //   }
+        // }
+      //     .playlist_overview_description {
+      //       color: white;
+      //     }
+      //   }
+      // }
+      }
+    }
+  }
 }
+
