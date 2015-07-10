@@ -69,12 +69,12 @@
         text-align: center;
         color: white;
         display: inline;
-        background: pink;
+        background: $darkgrey;
         border-radius: 2rem;
         padding: .5rem 1rem;
         margin: .5rem 1rem; 
         &:hover {
-          background: darken(pink, 20%);
+          color: $orange;
         }
       }
     }
@@ -82,14 +82,13 @@
   .breadcrumb {
     padding: 1rem 0;
     text-align: center;
-    border-bottom: .5px solid lighten(grey, 20%);
     a {
       text-decoration: none; 
       font-weight: 700;
       font-size: .8rem;
-      color: darken(grey, 20%);
+      color: $darkgrey;
       &:hover {
-        text-decoration: underline;
+
       }
     } 
     span {
@@ -97,7 +96,7 @@
     }
   }
   .user_show_playlists {
-    padding: 1rem 0 3rem;
+    padding: 0 1rem 1rem;
     ul {
       list-style: none;
       padding-left: 0;
@@ -121,27 +120,18 @@
             margin: 0;
           }
           .playlist_overview_title {
-            color: grey;
+            color: $darkgrey;
             text-decoration: none;
             font-size: 2rem;
             margin: 0;
+            &:hover {
+              color: $orange;
+            }
           }
           .playlist_overview_description {
             padding: 0;
-
           }
         }
-        // &:hover {
-        //   background: #FF5A00;
-        //   .playlist_overview {
-            
-        //   }
-        // }
-      //     .playlist_overview_description {
-      //       color: white;
-      //     }
-      //   }
-      // }
       }
     }
   }
