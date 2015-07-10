@@ -1,5 +1,5 @@
-<div id="users" class="cf">
-  <div class="wrapper">
+<div id="users" class="cf nav_drop">
+  <div class="wrapper_skinny">
     <ul>
       <h1 class='page_title'>User Index Page</h1>
       <% @users.each do |user| %>
@@ -15,3 +15,4 @@
     </ul>
   </div>
 </div>
+<%= render 'layouts/pagination' %>
