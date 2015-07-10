@@ -1,3 +1,17 @@
-<div class="wrapper_skinny">
-  <h1>All Users</h1>
+<div id="users" class="cf">
+  <div class="wrapper">
+    <ul>
+      <h1 class='page_title'>User Index Page</h1>
+      <% @users.each do |user| %>
+        <%= link_to user do %>
+          <li>
+            <img src="http://img.dummy-image-generator.com/people/dummy-400x400-GambiaGirl-plain.jpg" alt="#">
+            <div class="user_details">
+              <h2 class="user_name">Hayoji</h2>
+            </div>
+          </li>
+        <% end %>
+      <% end %>
+    </ul>
+  </div>
 </div>
