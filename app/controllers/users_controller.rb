@@ -8,8 +8,8 @@ class UsersController < ApplicationController
       end
 
       def show
-        # very simple code to grab the proper Post so it can be
-        # displayed in the Show view (show.html.erb)
+        @user = User.find(params[:id])
+        @playlists = Playlist.where(user_id: @user).order("created_at DESC")
       end
 
       private

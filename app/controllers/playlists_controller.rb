@@ -3,13 +3,12 @@ class PlaylistsController < ApplicationController
       before_action :find_user
       before_action :find_playlist, only: [:show]
 
-      def index
-        @playlists = Playlist.all.order('created_at DESC')
-      end
+      # def index
+      #   @playlists = Playlist.all.order('created_at DESC')
+      # end
 
       def show
-        # very simple code to grab the proper Post so it can be
-        # displayed in the Show view (show.html.erb)
+        @playlists = Playlist.where(user_id: @user)
       end
 
       def new
@@ -42,6 +41,8 @@ class PlaylistsController < ApplicationController
         # very simple code to find the post we're referring to and
         # destroy it.  Once that's done, redirect us to somewhere fun.
       end
+
+      
 
       private
 

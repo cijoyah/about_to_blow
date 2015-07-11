@@ -1,18 +1,13 @@
 <div id="playlists" class="cf">
   <div class="wrapper">
     <ul>
-      <% @playlists.each do |playlist| %>
-        <%= link_to playlist do %>
-          <li>
-            <img src="http://img.dummy-image-generator.com/people/dummy-400x400-GambiaGirl-plain.jpg" alt="#">
-            <div class="playlist_details">
-              <h2 class="playlist_title">title goes here</h2>
-              <p class="date_posted">2nd May 2015</p>
-            </div>
-          </li>
-        <% end %>
-      <% end %>
+      <li>
+        <img src="http://img.dummy-image-generator.com/people/dummy-400x400-GambiaGirl-plain.jpg" alt="#">
+        <div class="playlist_details">
+          <h2 class="playlist_title">title goes here</h2>
+          <p class="date_posted">2nd May 2015</p>
+        </div>
+      </li>
     </ul>
   </div>
-  <%= render 'layouts/pagination' %>
 </div>

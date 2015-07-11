@@ -49,6 +49,11 @@ body {
   padding: 3rem 0;
 }
 
+.lightgrey_background {
+  background-color: $lightgrey;
+}
+
+
 /*clearfix hack*/
 .cf:before,
 .cf:after {
@@ -95,7 +100,6 @@ body {
     }
   }
 }
-
 
 /*Carousel*/
 

@@ -1,3 +1,32 @@
-<div class="wrapper_skinny">
-  <h1>hello1</h1>
+<div class="lightgrey_background">
+  <div class="wrapper_skinny nav_drop">
+    <div class="user_show">
+      <div class="user_show_banner">
+        <h1 class="user_show_banner_name"> Hayoji </h1>
+        <p class="user_show_location"> Camden, London UK </p>
+        <div class="user_show_banner_links">
+          <a href="follow" class="user_show_banner_link">Follow</a>
+          <a href="follow" class="user_show_banner_link">Link</a>
+          <a href="follow" class="user_show_banner_link">Button</a>
+        </div>
+      </div>
+      <div class="breadcrumb">
+        <%= link_to users_path do %>
+          All Users
+          <span> / </span>
+          <%= link_to @user.username, user_path(@user) %>
+          <span> / </span>
+          <%= @playlist.title %>
+        <% end %>
+      </div>
+      <div class="playlist_show_overview">
+        <div class="playlist_showimage">
+          <img src="http://img.dummy-image-generator.com/people/dummy-400x400-GambiaGirl-plain.jpg" alt="">
+        </div>
+        <h2 class ="playlist_show_title" ><%= @playlist.title%></h2>
+        <p class ="playlist_show_description"><%= @playlist.description %></p>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>

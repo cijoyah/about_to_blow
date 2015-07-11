@@ -1,4 +1,4 @@
-<div class="user_show_background">
+<div class="lightgrey_background">
   <div class="wrapper_skinny nav_drop">
     <div class="user_show">
       <div class="user_show_banner">
@@ -11,78 +11,30 @@
         </div>
       </div>
       <div class="breadcrumb">
-        <a href="#">
-          users
+        <%= link_to users_path do %>
+          All Users
           <span> / </span>
-          userName
-        </a>
+          <%= link_to @user.username, user_path(@user) %>
+        <% end %>
       </div>
 
       <div class="user_show_playlists">
         <ul class="cf">
-          <li class="cf">
-            <div class="playlist_thumbnail">
-              <img src="http://img.dummy-image-generator.com/people/dummy-400x400-GambiaGirl-plain.jpg" alt="">
-            </div>
-            <div class="playlist_overview">
-              <h2><a href="#" class="playlist_overview_title"> The Chillzone Playlist</a></h2>
-              <p class='playlist_overview_description'>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old.</p>
-            </div>
-          </li>
-          <li class="cf">
-            <div class="playlist_thumbnail">
-              <img src="http://img.dummy-image-generator.com/people/dummy-400x400-GambiaGirl-plain.jpg" alt="">
-            </div>
-            <div class="playlist_overview">
-              <h2><a href="#" class="playlist_overview_title"> The Chillzone Playlist</a></h2>
-              <p class='playlist_overview_description'>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old.</p>
-            </div>
-          </li>
-          <li class="cf">
-            <div class="playlist_thumbnail">
-              <img src="http://img.dummy-image-generator.com/people/dummy-400x400-GambiaGirl-plain.jpg" alt="">
-            </div>
-            <div class="playlist_overview">
-              <h2><a href="#" class="playlist_overview_title"> The Chillzone Playlist</a></h2>
-              <p class='playlist_overview_description'>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old.</p>
-            </div>
-          </li>
-          <li class="cf">
-            <div class="playlist_thumbnail">
-              <img src="http://img.dummy-image-generator.com/people/dummy-400x400-GambiaGirl-plain.jpg" alt="">
-            </div>
-            <div class="playlist_overview">
-              <h2><a href="#" class="playlist_overview_title"> The Chillzone Playlist</a></h2>
-              <p class='playlist_overview_description'>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old.</p>
-            </div>
-          </li>
-          <li class="cf">
-            <div class="playlist_thumbnail">
-              <img src="http://img.dummy-image-generator.com/people/dummy-400x400-GambiaGirl-plain.jpg" alt="">
-            </div>
-            <div class="playlist_overview">
-              <h2><a href="#" class="playlist_overview_title"> The Chillzone Playlist</a></h2>
-              <p class='playlist_overview_description'>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old.</p>
-            </div>
-          </li>
-          <li class="cf">
-            <div class="playlist_thumbnail">
-              <img src="http://img.dummy-image-generator.com/people/dummy-400x400-GambiaGirl-plain.jpg" alt="">
-            </div>
-            <div class="playlist_overview">
-              <h2><a href="#" class="playlist_overview_title"> The Chillzone Playlist</a></h2>
-              <p class='playlist_overview_description'>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old.</p>
-            </div>
-          </li>
-          <li class="cf">
-            <div class="playlist_thumbnail">
-              <img src="http://img.dummy-image-generator.com/people/dummy-400x400-GambiaGirl-plain.jpg" alt="">
-            </div>
-            <div class="playlist_overview">
-              <h2><a href="#" class="playlist_overview_title"> The Chillzone Playlist</a></h2>
-              <p class='playlist_overview_description'>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old.</p>
-            </div>
-          </li>
+          <% @playlists.each do |playlist| %>
+            <li class="cf">
+              <div class="playlist_thumbnail">
+                <img src="http://img.dummy-image-generator.com/people/dummy-400x400-GambiaGirl-plain.jpg" alt="">
+              </div>
+              <div class="playlist_overview">
+                <h2 class="playlist_overview_title">
+                  <%= link_to playlist.title, user_playlist_path(@user, playlist) %>
+                </h2>
+                <p class='playlist_overview_description'>
+                  <%= playlist.description%>
+                </p>
+              </div>
+            </li>
+          <% end %>
         </ul>
       </div>
     </div>
