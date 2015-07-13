@@ -78,14 +78,12 @@
   .breadcrumb {
     padding: 1rem 0;
     text-align: center;
+    margin-top: 1rem;
     a {
       text-decoration: none; 
       font-weight: 700;
       font-size: .8rem;
       color: $darkgrey;
-      &:hover {
-
-      }
     } 
     span {
       margin: 0 .5rem;
@@ -116,12 +114,15 @@
             margin: 0;
           }
           .playlist_overview_title {
-            color: $darkgrey;
-            text-decoration: none;
-            font-size: 2rem;
-            margin: 0;
-            &:hover {
-              color: $orange;
+            margin: 0; 
+            a {
+              color: $darkgrey;
+              text-decoration: none;
+              font-size: 2rem;
+              &:hover {
+                // text-decoration: underline;
+                color: $orange;
+              }
             }
           }
           .playlist_overview_description {

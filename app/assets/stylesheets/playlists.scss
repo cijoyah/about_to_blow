@@ -8,11 +8,10 @@
 // }
 
 #playlists {
-  padding-bottom: 3rem
+  padding-bottom: 3rem;
   ul {
     padding-left: 0;
     margin: 0;
-  }
     li {
       list-style: none;
       width: 23%;
@@ -51,6 +50,107 @@
         }
       } 
     }
+  }
 }
+
+
+.playlist_show {
+  background-color: white;
+  .playlist_show_banner {
+    background-image: url("blue_pattern.png");
+    background-size: cover;
+    text-align: center;
+    padding: 1rem 0rem 1rem 0rem;
+    // border-bottom: 2rem solid $lightgrey;
+    .breadcrumb {
+      // padding-bottom: 1.5rem;
+      text-align: center;
+      // margin-top: 1rem;
+      a {
+        text-decoration: none; 
+        font-weight: 700;
+        font-size: .8rem;
+        color: $darkgrey;
+      } 
+      span {
+        margin: 0 .5rem;
+      }
+    }
+    img {
+      display: block;
+      margin: 1rem auto 1rem auto;
+      // border-radius: 1rem;
+      width: 15rem;
+      max-width: 100%;
+      border-radius: 100%;
+    }
+    .playlist_show_user_name_location {
+      font-size: 1rem;
+      font-weight: 400;
+      color: white;
+    }
+    .playlist_show_title {
+      text-align: center;
+      font-size: 2rem;
+      margin: 1rem 35%;
+      background-color: rgba(255, 255, 255, 0.3);
+      padding: 0.2rem;
+      // color: white;  
+    }
+    .playlist_show_description {
+      margin: 0 15% 1rem;
+      text-align: center;
+      background-color: rgba(255, 255, 255, 0.3);
+      padding: 0.2rem;
+      
+    }
+  }
+  .playlist_show_index {
+    padding: 1rem;
+    ul {
+      list-style: none;
+      padding-left: 0;
+      margin: 0;
+      li {
+        padding: 1rem 1rem 0.8rem 1rem ;
+        margin-bottom: 0;
+        .playlist_thumbnail {
+          width: 20%;
+          float: left;
+          margin-right: 1.5%;
+          img {
+            width: 10rem;
+            max-width: 100%;
+          }
+        }
+        .playlist_overview {
+          width: 70%;
+          float: left;
+          h2 {
+            margin: 0;
+          }
+          .playlist_overview_title {
+            margin: 0; 
+            a {
+              color: $darkgrey;
+              text-decoration: none;
+              font-size: 2rem;
+              &:hover {
+                // text-decoration: underline;
+                color: $orange;
+              }
+            }
+          }
+          .playlist_overview_description {
+            padding: 0;
+          }
+        }
+      }
+    }
+  }
+}
+
+
+
 
 

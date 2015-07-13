@@ -1,18 +1,10 @@
 <div class="lightgrey_background">
   <div class="wrapper_skinny nav_drop">
-    <div class="user_show">
+    
+    <div class="playlist_show">
+      <div class="playlist_show_banner">
 
-      <div class="user_show_banner">
-        <h1 class="user_show_banner_name"> Hayoji </h1>
-        <p class="user_show_location"> Camden, London UK </p>
-        <div class="user_show_banner_links">
-          <a href="follow" class="user_show_banner_link">Follow</a>
-          <a href="follow" class="user_show_banner_link">Link</a>
-          <a href="follow" class="user_show_banner_link">Button</a>
-        </div>
-      </div>
-
-      <div class="breadcrumb">
+        <div class="breadcrumb">
         <%= link_to users_path do %>
           All Users
           <span> / </span>
@@ -20,38 +12,39 @@
           <span> / </span>
           <%= @playlist.title %>
         <% end %>
-      </div>
+        </div>
 
-      <div class="playlist_show_overview">
-        <div class="playlist_showimage">
+        <div class="playlist_show_image">
           <img src="http://img.dummy-image-generator.com/people/dummy-400x400-GambiaGirl-plain.jpg" alt="">
         </div>
+
+        <h1 class="playlist_show_user_name_location"> Hayoji <span> </span> Camden, London UK </h1>
+        
+
         <h2 class ="playlist_show_title" ><%= @playlist.title%></h2>
         <p class ="playlist_show_description"><%= @playlist.description %></p>
-        </div>
-      
-
-        <div class="user_show_playlists">
-          <ul class="cf">
-            <% @playlists.each do |playlist| %>
-              <li class="cf">
-                <div class="playlist_thumbnail">
-                  <img src="http://img.dummy-image-generator.com/people/dummy-400x400-GambiaGirl-plain.jpg" alt="">
-                </div>
-                <div class="playlist_overview">
-                  <h2 class="playlist_overview_title">
-                    <%= link_to playlist.title, user_playlist_path(@user, playlist) %>
-                  </h2>
-                  <p class='playlist_overview_description'>
-                    <%= playlist.description%>
-                  </p>
-                </div>
-              </li>
-            <% end %>
-          </ul>
-        </div>
-
+      </div> 
+    
+      <div class="playlist_show_index">
+        <ul class="cf">
+          <% @playlists.each do |playlist| %>
+            <li class="cf">
+              <div class="playlist_thumbnail">
+                <img src="http://img.dummy-image-generator.com/people/dummy-400x400-GambiaGirl-plain.jpg" alt="">
+              </div>
+              <div class="playlist_overview">
+                <h2 class="playlist_overview_title">
+                  <%= link_to playlist.title, user_playlist_path(@user, playlist) %>
+                </h2>
+                <p class='playlist_overview_description'>
+                  <%= playlist.description%>
+                </p>
+              </div>
+            </li>
+          <% end %>
+        </ul>
       </div>
+
     </div>
   </div>
 </div>
