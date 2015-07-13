@@ -1,13 +1,17 @@
 Rails.application.routes.draw do
 
   devise_for :users
-  root 'home#index'
+  
 
   resources :users, only: [:index, :show] do
-    resources :playlists
-    
+    resources :playlists 
   end
 
+  authenticated :user do
+    root 'users#dashboard', as: 'authenticated_root'
+  end
+
+  root 'home#index'
 
 
 

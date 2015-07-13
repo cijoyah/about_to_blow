@@ -1,16 +1,20 @@
 class UsersController < ApplicationController
 
       before_action :find_user, only: [:show , :dashboard]
-      before_action :find_playlists, only: [:show, :dashboard]
+      before_action :find_playlist, only: [:show, :dashboard]
 
       def index
         @users = User.all.order('created_at DESC')
       end
 
       def show
-        @user = User.find(params[:id])
         @playlists = Playlist.where(user_id: @user).order("created_at DESC")
       end
+
+      def dashboard
+      end
+
+
 
       private
 
@@ -22,7 +26,7 @@ class UsersController < ApplicationController
         end
       end
 
-      def find_playlists
+      def find_playlist
         @playlists = Playlist.where(user_id: @user)
       end
 
