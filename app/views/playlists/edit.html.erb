@@ -12,19 +12,7 @@
           </ul>
         </div>
       </div>
-
-      <div id="form" class="wrapper_form">
-        <%= form_for ([ @user, @playlist ]) do |f| %>
-          <%= f.label :title %></br>
-          <%= f.text_field :title %>
-          <br>
-          <%= f.label :description %></br>
-          <%= f.text_area :description %>
-          <br>
-          <br>
-          <%= f.submit %>
-        <% end %> 
-      </div>     
+      <%= render 'playlists/form' %>
     </div>
   </div>
 </div>

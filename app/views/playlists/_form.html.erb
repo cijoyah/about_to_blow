@@ -1,0 +1,11 @@
+<div id="form" class="wrapper_form">
+  <%= form_for ([ @user, @playlist ]) do |f| %>
+    <%= f.label :title %>
+    <%= f.text_field :title %>
+
+    <%= f.label :description %>
+    <%= f.text_area :description %>
+
+    <%= f.submit %>
+  <% end %> 
+</div>
