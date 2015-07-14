@@ -76,7 +76,7 @@
     }
   }
   .breadcrumb {
-    padding: 1rem 0;
+    padding: 0;
     text-align: center;
     margin-top: 1rem;
     a {
@@ -90,7 +90,7 @@
     }
   }
   .user_show_playlists {
-    padding: 0 1rem 1rem;
+    padding: 1rem;
     ul {
       list-style: none;
       padding-left: 0;
@@ -135,10 +135,10 @@
 }
 
 
-/* Dashboard */
-.dashboard_banner {
+/* account */
+.account_banner {
   padding-bottom: 2rem !important;
-  .dashboard_links {
+  .account_links {
     text-align: center;
     ul {
       list-style: none;

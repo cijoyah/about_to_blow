@@ -1,7 +1,7 @@
 class PlaylistsController < ApplicationController
 
       before_action :find_user
-      before_action :find_playlist, only: [:show]
+      before_action :find_playlist, only: [:show, :edit, :update, :destroy]
 
       # def index
       #   @playlists = Playlist.all.order('created_at DESC')
@@ -31,15 +31,17 @@ class PlaylistsController < ApplicationController
       end
 
       def update
-        # code to figure out which post we're trying to update, then
-        # actually update the attributes of that post.  Once that's
-        # done, redirect us to somewhere like the Show page for that
-        # post
+        if @playlist.update playlist_params
+          redirect_to user_playlist_path(@user, @playlist), notice: "Playlist was succesfully updated!"
+        else
+          render 'edit'
+        end
       end
 
+
       def destroy
-        # very simple code to find the post we're referring to and
-        # destroy it.  Once that's done, redirect us to somewhere fun.
+        @playlist.destroy
+        redirect_to root_path
       end
 
       

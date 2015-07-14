@@ -1,0 +1,30 @@
+<div class="lightgrey_background">
+  <div class="wrapper_skinny nav_drop">  
+    <div class="user_show">
+      <div class="user_show_banner account_banner">
+        <h1> Account </h1>
+        <div class="account_links">
+          <ul>
+            <li><%= link_to "Playlists", root_path %></li>
+            <li class="current_page"><%= link_to "Edit Playlist" %></li>
+            <li><%= link_to "Settings", edit_user_registration_path %></li>
+            <li><%= link_to "Profile", user_path(current_user) %></li>
+          </ul>
+        </div>
+      </div>
+
+      <div id="form" class="wrapper_form">
+        <%= form_for ([ @user, @playlist ]) do |f| %>
+          <%= f.label :title %></br>
+          <%= f.text_field :title %>
+          <br>
+          <%= f.label :description %></br>
+          <%= f.text_area :description %>
+          <br>
+          <br>
+          <%= f.submit %>
+        <% end %> 
+      </div>     
+    </div>
+  </div>
+</div>

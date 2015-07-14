@@ -8,7 +8,7 @@ Rails.application.routes.draw do
   end
 
   authenticated :user do
-    root 'users#dashboard', as: 'authenticated_root'
+    root 'users#account', as: 'authenticated_root'
   end
 
   root 'home#index'

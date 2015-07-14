@@ -2,14 +2,14 @@
   <div class="wrapper_skinny nav_drop">
     
     <div class="user_show">
-      <div class="user_show_banner dashboard_banner">
-        <h1> Dashboard </h1>
-        <div class="dashboard_links">
+      <div class="user_show_banner account_banner">
+        <h1> Account </h1>
+        <div class="account_links">
           <ul>
             <li class="current_page"><%= link_to "Playlists" %></li>
-            <li><%= link_to "New Playlist" %></li>
-            <li><%= link_to "Account" %></li>
-            <li><%= link_to "Profile" %></li>
+            <li><%= link_to "New Playlist", new_user_playlist_path(@user) %></li>
+            <li><%= link_to "Settings", edit_user_registration_path %></li>
+            <li><%= link_to "Profile", user_path(current_user) %></li>
           </ul>
         </div>
       </div>
@@ -26,11 +26,11 @@
                   <%= link_to playlist.title, user_playlist_path(@user, playlist) %>
                 </h2>
                 <p class='playlist_overview_description'>
-                  <%= playlist.description%>
+                  <%= truncate(playlist.description, length: 260) %>
                 </p>
                 <div class="edit_delete_btn">
-                  <%= link_to "Edit" %>
-                  <%= link_to "Delete" %>
+                  <%= link_to "Edit", edit_user_playlist_path(@user, playlist) %>
+                  <%= link_to "Delete", user_playlist_path(@user, playlist), method: :delete %>
                 </div>
               </div>
             </li>

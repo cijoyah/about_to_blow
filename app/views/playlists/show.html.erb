@@ -1,4 +1,4 @@
-<div class="lightgrey_background">
+<div class="lightgrey_background_playlist">
   <div class="wrapper_skinny nav_drop">
     
     <div class="playlist_show">
@@ -37,14 +37,13 @@
                   <%= link_to playlist.title, user_playlist_path(@user, playlist) %>
                 </h2>
                 <p class='playlist_overview_description'>
-                  <%= playlist.description%>
+                  <%= truncate(playlist.description, length: 260) %>
                 </p>
               </div>
             </li>
           <% end %>
         </ul>
       </div>
-
     </div>
   </div>
 </div>

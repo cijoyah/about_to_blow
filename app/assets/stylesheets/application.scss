@@ -19,6 +19,7 @@ $lightgrey: #F2F2F2;
 $darkgrey: #333;
 $white: #FFFFFF;
 
+
  
 body {
   font-family: 'Open Sans', sans-serif;
@@ -27,22 +28,28 @@ body {
 .wrapper_wide {
   width: 100%;
   margin: 0 auto;
+
 }
 
 .wrapper {
   width: 90%;
   margin: 0 auto;
+
+
 }
 
 .wrapper_skinny {
   width: 80%;
   margin: 0 auto;
+
+
 }
 
 .wrapper_form {
-  width: 40%;
+  width: 60%;
   margin: 0 auto;
-  padding: 8rem 0 0 0;
+  padding: 3rem 0;
+
 }
 
 .nav_drop {
@@ -51,7 +58,13 @@ body {
 
 .lightgrey_background {
   background-color: $lightgrey;
+  height: 100vh;
 }
+
+.lightgrey_background_playlist {
+    background-color: $lightgrey; 
+}
+
 
 
 /*clearfix hack*/
@@ -163,8 +176,11 @@ input[type='email'],input[type='text'],input[type='password'],textarea {
   margin-bottom: 1rem;
 }
 
-#from {
+#form {
   padding-bottom: 5rem; 
+  textarea {
+    height: 10rem;
+  }
 }
 
 

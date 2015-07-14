@@ -1,21 +1,30 @@
-<div id="form" class="wrapper_form">
-
-    <h1>new</h1>
-
-    <%= form_for ([ @user, @playlist ]) do |f| %>
-      <%= f.label :title %></br>
-      <%= f.text_field :title %>
-
-      <br>
-
-      <%= f.label :description %></br>
-      <%= f.text_area :description %>
+<div class="lightgrey_background">
+  <div class="wrapper_skinny nav_drop">
     
-      <br>
-      <br>
+    <div class="user_show">
+      <div class="user_show_banner account_banner">
+        <h1> Account </h1>
+        <div class="account_links">
+          <ul>
+            <li><%= link_to "Playlists", root_path %></li>
+            <li class="current_page"><%= link_to "New Playlist", new_user_playlist_path(@user) %></li>
+            <li><%= link_to "Settings", edit_user_registration_path %></li>
+            <li><%= link_to "Profile", user_path(current_user) %></li>
+          </ul>
+        </div>
+      </div>
+      
+      <div id="form" class="wrapper_form">
+          <%= form_for ([ @user, @playlist ]) do |f| %>
+            <%= f.label :title %>
+            <%= f.text_field :title %>
 
-      <%= f.submit %>
+            <%= f.label :description %>
+            <%= f.text_area :description %>
 
-    <% end %> 
-
+            <%= f.submit %>
+          <% end %> 
+      </div>
+    </div>
+  </div>
 </div>
