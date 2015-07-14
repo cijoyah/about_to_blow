@@ -1,22 +1,17 @@
-
-
-
 <div class="lightgrey_background">
   <div class="wrapper_skinny nav_drop">
     
     <div class="user_show">
-      <div class="user_show_banner">
-      
-
-
-      </div>
-
-      <div class="breadcrumb">
-        <%= link_to users_path do %>
-          All Users
-          <span> / </span>
-          <%= link_to @user.username, user_path(@user) %>
-        <% end %>
+      <div class="user_show_banner dashboard_banner">
+        <h1> Dashboard </h1>
+        <div class="dashboard_links">
+          <ul>
+            <li class="current_page"><%= link_to "Playlists" %></li>
+            <li><%= link_to "New Playlist" %></li>
+            <li><%= link_to "Account" %></li>
+            <li><%= link_to "Profile" %></li>
+          </ul>
+        </div>
       </div>
 
       <div class="user_show_playlists">
@@ -33,6 +28,10 @@
                 <p class='playlist_overview_description'>
                   <%= playlist.description%>
                 </p>
+                <div class="edit_delete_btn">
+                  <%= link_to "Edit" %>
+                  <%= link_to "Delete" %>
+                </div>
               </div>
             </li>
           <% end %>
