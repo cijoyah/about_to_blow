@@ -1,7 +1,7 @@
 class PlaylistsController < ApplicationController
 
       before_action :authenticate_user!, except: [:show]
-      before_filer :require_permission
+      before_filter :require_permission
       before_action :find_user
       before_action :find_playlist, only: [:show, :edit, :update, :destroy]
 
@@ -63,7 +63,7 @@ class PlaylistsController < ApplicationController
       end
 
       def require_permission
-        @user = User.find(params[:podcast_id])
+        @user = User.find(params[:user_id])
         if current_user != @user
           redirect_to root_path, notice: "You do not have require permission to view this page"
         end
