@@ -5,7 +5,7 @@
       <% @users.each do |user| %>
         <%= link_to user do %>
           <li>
-            <img src="http://img.dummy-image-generator.com/people/dummy-400x400-GambiaGirl-plain.jpg" alt="#">
+            <%= image_tag user.avatar.url(:medium) %>
             <div class="user_details">
               <h2 class="user_name">Hayoji</h2>
             </div>

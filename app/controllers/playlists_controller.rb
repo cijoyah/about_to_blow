@@ -1,7 +1,7 @@
 class PlaylistsController < ApplicationController
 
       before_action :authenticate_user!, except: [:show]
-      before_filter :require_permission
+      before_filter :require_permission, except: [:show]
       before_action :find_user
       before_action :find_playlist, only: [:show, :edit, :update, :destroy]
 

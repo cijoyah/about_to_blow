@@ -30,7 +30,7 @@
           <% @playlists.each do |playlist| %>
             <li class="cf">
               <div class="playlist_thumbnail">
-                <img src="http://img.dummy-image-generator.com/people/dummy-400x400-GambiaGirl-plain.jpg" alt="">
+                <%= image_tag playlist.avatar.url(:medium) %>  
               </div>
               <div class="playlist_overview">
                 <h2 class="playlist_overview_title">
