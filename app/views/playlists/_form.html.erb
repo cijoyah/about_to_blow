@@ -1,5 +1,9 @@
 <div id="form" class="wrapper_form">
   <%= form_for ([ @user, @playlist ]) do |f| %>
+    
+    <%= f.label :avatar %>
+    <%= f.file_field :avatar %>
+
     <%= f.label :title %>
     <%= f.text_field :title %>
 
