@@ -19,10 +19,11 @@
         </div>
 
         <h1 class="playlist_show_user_name_location"> Hayoji <span> </span> Camden, London UK </h1>
-        
 
         <h2 class ="playlist_show_title" ><%= @playlist.title%></h2>
         <p class ="playlist_show_description"><%= @playlist.description %></p>
+
+        <%= render 'playlists/player' %>
       </div> 
     
       <div class="playlist_show_index">
@@ -47,3 +48,17 @@
     </div>
   </div>
 </div>
+
+<script>
+  $(document).ready(function(){
+    $("#jquery_jplayer_1").jPlayer({
+      ready: function () {
+        $(this).jPlayer("setMedia", {
+          mp3: "<%= @playlist.mp3.url %>",
+        });
+      },
+      swfPath: "/js",
+      supplied: "mp3"
+    });
+  });
+</script>
