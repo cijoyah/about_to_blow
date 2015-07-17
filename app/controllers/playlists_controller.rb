@@ -51,7 +51,7 @@ class PlaylistsController < ApplicationController
       private
 
       def playlist_params
-        params.require(:playlist).permit(:title, :description, :tracks, :last_updated, :avatar, :mp3_file_name)
+        params.require(:playlist).permit(:title, :description, :tracks, :last_updated, :avatar, :mp3_file_name, :mp3_content_type, :mp3_file_size, :mp3_updated_at, :mp3)
       end
 
       def find_user
