@@ -30,3 +30,17 @@
     </div>
   </div>
 </div>
+
+<script>
+  $(document).ready(function(){
+    $("#jquery_jplayer_1").jPlayer({
+      ready: function () {
+        $(this).jPlayer("setMedia", {
+          mp3: "<%= @playlist.mp3.url %>",
+        });
+      },
+      swfPath: "/js",
+      supplied: "mp3"
+    });
+  });
+</script>
