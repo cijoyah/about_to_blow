@@ -60,7 +60,7 @@
     background-image: url("https://s3-eu-west-1.amazonaws.com/about-to-blow/app_images/blue_pattern.png");
     background-size: cover;
     text-align: center;
-    padding: 1rem 0rem 1rem 0rem;
+    padding: 1rem 0rem 0.6rem 0rem;
     // border-bottom: 2rem solid $lightgrey;
     .breadcrumb {
       // padding-bottom: 1.5rem;
@@ -239,8 +239,7 @@
 
 .jp-play-bar {
   height: 12px;
-  background-color: #fff;
-  border-radius: 20px 20px 20px 20px;
+  background-color: $orange;
 }
 
 .jp-volume-bar {

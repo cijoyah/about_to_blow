@@ -4,8 +4,8 @@
     <div class="user_show">
       <div class="user_show_banner">
         <%= image_tag @user.avatar.url(:medium) %>
-        <h1 class="user_show_banner_name"> Hayoji </h1>
-        <p class="user_show_location"> Camden, London UK </p>
+        <h1 class="user_show_username"><%= @user.username %></h1>
+        <div class="user_show_location"><%= @user.location %></div>
         <div class="user_show_banner_links">
           <a href="follow" class="user_show_banner_link">Follow</a>
           <a href="follow" class="user_show_banner_link">Link</a>
@@ -34,6 +34,7 @@
                 </h2>
                 <p class='playlist_overview_description'>
                   <%= truncate(playlist.description, length: 260) %>
+                  <%#= render 'playlists/player' %>
                 </p>
               </div>
             </li>
