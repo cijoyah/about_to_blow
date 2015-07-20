@@ -20,7 +20,9 @@
   </div>
 <% end %>
 
-<%= render 'layouts/main_nav' %>
+<% unless current_page? (root_path) %>
+  <%= render 'layouts/main_nav' %>
+<% end %>
 
 <%= yield %>
 
