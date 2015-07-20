@@ -10,7 +10,7 @@ class PlaylistsController < ApplicationController
       # end
 
       def show
-        @playlists = Playlist.where(user_id: @user)
+        @playlists = Playlist.where(user_id: @user).reject { |playlist| playlist.id == @playlist.id}
       end
 
       def new
