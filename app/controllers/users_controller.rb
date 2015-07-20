@@ -4,11 +4,11 @@ class UsersController < ApplicationController
       before_action :find_playlist, only: [:show, :account]
 
       def index
-        @users = User.all.order('created_at DESC')
+        @users = User.all.order('created_at DESC').paginate(page: params[:page], per_page: 20)
       end
 
       def show
-        @playlists = Playlist.where(user_id: @user).order("created_at DESC")
+        @playlists = Playlist.where(user_id: @user).order("created_at DESC").paginate(page: params[:page], per_page: 10)
       end
 
       def account
@@ -27,7 +27,7 @@ class UsersController < ApplicationController
       end
 
       def find_playlist
-        @playlists = Playlist.where(user_id: @user)
+        @playlists = Playlist.where(user_id: @user).paginate(page: params[:page], per_page: 10)
       end
 
 end
