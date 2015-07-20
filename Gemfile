@@ -25,6 +25,7 @@ gem 'paperclip', '~> 4.3.0'
 gem 'aws-sdk', '< 2.0'
 gem 'fog'
 gem 'will_paginate', '~> 3.0.7'
+gem 'faker', '~> 1.4.3'
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
