@@ -22,8 +22,8 @@
         img {
           opacity: .5;
         }
-        .playlist_details {
-          .playlist_title {
+        .track_details {
+          .track_title {
             color: blue;
           }
           .date_posted {
@@ -35,9 +35,9 @@
         width: 100%;
         max-width: 100%;
       }
-      .playlist_details {
+      .track_details {
         padding: 1rem 7.5%;
-        .playlist_title {
+        .track_title {
           margin: 0;
           font-size: 1rem;
           font-weight: 700;
@@ -53,10 +53,15 @@
   }
 }
 
+audio {
+  width: 72%;
+  padding: 1rem 0;
+}
 
-.playlist_show {
+
+.track_show {
   background-color: white;
-  .playlist_show_banner {
+  .track_show_banner {
     background-image: url("https://s3-eu-west-1.amazonaws.com/about-to-blow/app_images/blue_pattern.png");
     background-size: cover;
     text-align: center;
@@ -84,12 +89,12 @@
       max-width: 100%;
       border-radius: 100%;
     }
-    .playlist_show_user_name_location {
+    .track_show_user_name_location {
       font-size: 1rem;
       font-weight: 400;
       color: white;
     }
-    .playlist_show_title {
+    .track_show_title {
       text-align: center;
       font-size: 2rem;
       margin: 1rem 35%;
@@ -97,14 +102,14 @@
       padding: 0.2rem;
       // color: white;  
     }
-    .playlist_show_description {
+    .track_show_description {
       margin: 0 15% 1rem;
       text-align: center;
       background-color: rgba(255, 255, 255, 0.3);
       padding: 0.2rem; 
     }
   }
-  .playlist_show_index {
+  .track_show_index {
     padding: 1rem;
     ul {
       list-style: none;
@@ -113,7 +118,7 @@
       li {
         padding: 1rem 1rem 0.8rem 1rem ;
         margin-bottom: 0;
-        .playlist_thumbnail {
+        .track_thumbnail {
           width: 20%;
           float: left;
           margin-right: 1.5%;
@@ -122,13 +127,13 @@
             max-width: 100%;
           }
         }
-        .playlist_overview {
+        .track_overview {
           width: 70%;
           float: left;
           h2 {
             margin: 0;
           }
-          .playlist_overview_title {
+          .track_overview_title {
             margin: 0; 
             a {
               color: $darkgrey;
@@ -140,7 +145,7 @@
               }
             }
           }
-          .playlist_overview_description {
+          .track_overview_description {
             padding: 0;
           }
         }
@@ -149,116 +154,6 @@
   }
 }
 
-/* player */
-
-.jp-jplayer,.jp-audio {
-  width: 70%;
-  margin: 0 auto .5rem auto;
-}
-
-.jp-title {
-  font-size: 12px;
-  text-align: center;
-  color: #999;
-}
-
-.jp-title ul {
-  padding: 0;
-  margin: 0;
-  list-style: none;
-}
-
-.jp-gui {
-  position: relative;
-  background: $darkgrey;
-  transition: background .4s ease-in-out;
-  border-radius: 3px;
-  overflow: hidden;
-}
-
-.jp-controls {
-  padding: 0;
-  margin: 0;
-  list-style: none;
-}
-
-.jp-controls li {
-  display: inline;
-}
-
-.jp-controls a {
-  color: $orange;
-}
-
-.jp-play,.jp-pause {
-  width: 60px;
-  height: 40px;
-  float: left;
-  display: inline-block;
-  text-align: center;
-  line-height: 43px;
-  border-right: 1px solid lighten($darkgrey, 10%);
-}
-
-.jp-controls .jp-play:hover,.jp-controls .jp-pause:hover {
-  background-color: darken($darkgrey, 10%);
-}
-
-.jp-mute,.jp-unmute {
-  position: absolute;
-  right: 59px;
-  top: -3px;
-  width: 20px;
-  height: 40px;
-  display: inline-block;
-  line-height: 46px;
-}
-
-.jp-mute {
-  text-align: left;
-}
-
-.jp-time-holder {
-  color: #FFF;
-  font-size: 12px;
-  line-height: 14px;
-  position: absolute;
-  right: 90px;
-  top: 14px;
-}
-
-.jp-progress {
-  background-color: darken($darkgrey, 25%);
-  border-radius: 20px 20px 20px 20px;
-  overflow: hidden;
-  position: absolute;
-  right: 17%;
-  top: 15px;
-  width: 73%;
-}
-
-.jp-play-bar {
-  height: 12px;
-  background-color: $orange;
-}
-
-.jp-volume-bar {
-  position: absolute;
-  right: 10px;
-  top: 17px;
-  width: 45px;
-  height: 8px;
-  border-radius: 20px 20px 20px 20px;
-  background-color: darken($darkgrey, 25%);
-  overflow: hidden;
-}
-
-.jp-volume-bar-value {
-  background-color: $orange;
-  height: 8px;
-  border-radius: 20px 20px 20px 20px;
-}
-  
 
 
 

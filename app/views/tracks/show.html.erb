@@ -1,4 +1,4 @@
-<div class="lightgrey_background_track">
+<div class="lightgrey_background">
   <div class="wrapper_skinny nav_drop">
     
     <div class="track_show">
@@ -15,7 +15,7 @@
         </div>
 
         <div class="track_show_image">
-          <%= image_tag @track.avatar.url(:medium) %>
+          <%= image_tag @track.track_image %>
         </div>
 
         <h1 class="track_show_user_name_location"> Hayoji <span> </span> Camden, London UK </h1>
@@ -23,7 +23,8 @@
         <h2 class ="track_show_title" ><%= @track.title%></h2>
         <p class ="track_show_description"><%= @track.description %></p>
 
-        <%= render partial: 'tracks/player', locals: {track: @track} %>
+        <%= audio_tag @track.track, controls: true, :preload => 'none'%>
+
       </div> 
     
       <div class="track_show_index">
@@ -31,15 +32,15 @@
           <% @tracks.each do |track| %>
             <li class="cf">
               <div class="track_thumbnail">
-                <%= image_tag track.avatar.url(:medium) %>  
+                <%= image_tag track.track_image %>  
               </div>
               <div class="track_overview">
                 <h2 class="track_overview_title">
                   <%= link_to track.title, user_track_path(@user, track) %>
                 </h2>
-                <p class='track_overview_description'>
-                  <%= truncate(track.description, length: 260) %>
-                </p>
+                <div class="audio_player">
+                  <%= audio_tag track.track, controls: true, :preload => 'none'%>
+                </div>
               </div>
             </li>
           <% end %>

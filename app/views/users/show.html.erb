@@ -3,7 +3,7 @@
     
     <div class="user_show">
       <div class="user_show_banner">
-        <%= image_tag @user.avatar.url(:medium) %>
+        <%= image_tag @user.avatar %>
         <h1 class="user_show_username"><%= @user.username %></h1>
         <div class="user_show_location"><%= @user.location %></div>
         <div class="user_show_banner_links">
@@ -21,26 +21,24 @@
         <% end %>
       </div>
 
-      <div class="user_show_tracks">
+      <div class="track_show_index">
         <ul class="cf">
           <% @tracks.each do |track| %>
             <li class="cf">
               <div class="track_thumbnail">
-                <%= image_tag track.avatar.url(:medium) %> 
+                <%= image_tag track.track_image %>  
               </div>
               <div class="track_overview">
                 <h2 class="track_overview_title">
                   <%= link_to track.title, user_track_path(@user, track) %>
                 </h2>
-                <p class='track_overview_description'>
-                  <%= truncate(track.description, length: 260) %>
-                  <%= render partial: 'tracks/player', locals: { track: track} %>
-                </p>
+                <div class="audio_player">
+                  <%= audio_tag track.track, controls: true, :preload => 'none'%>
+                </div>
               </div>
             </li>
           <% end %>
         </ul>
-        <%= will_paginate @tracks %>
       </div>
     </div>
   </div>

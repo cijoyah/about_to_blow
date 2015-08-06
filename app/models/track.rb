@@ -1,5 +1,9 @@
-class Tracks < ActiveRecord::Base
+class Track < ActiveRecord::Base
+  
   belongs_to :user
+
+  mount_uploader :track, TrackUploader
+  mount_uploader :track_image, TrackImageUploader
 
   # has_attached_file :avatar, :styles => { 
   #   :large => "500x500#", 

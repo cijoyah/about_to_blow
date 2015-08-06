@@ -1,8 +1,8 @@
 <div id="form" class="wrapper_form">
   <%= form_for ([ @user, @track ]) do |f| %>
     
-    <%= f.label :avatar %>
-    <%= f.file_field :avatar %>
+    <%= f.label :track_image %>
+    <%= f.file_field :track_image %>
 
     <%= f.label :title %>
     <%= f.text_field :title %>
@@ -10,8 +10,8 @@
     <%= f.label :description %>
     <%= f.text_area :description %>
 
-    <%= f.label :mp3 %>
-    <%= f.file_field :mp3 %>
+    <%= f.label :track %>
+    <%= f.file_field :track %>
 
     <%= f.submit %>
   <% end %> 

@@ -14,20 +14,21 @@
         </div>
       </div>
 
-      <div class="user_show_tracks">
+
+      <div class="track_show_index">
         <ul class="cf">
           <% @tracks.each do |track| %>
             <li class="cf">
               <div class="track_thumbnail">
-                <%= image_tag track.avatar.url(:medium) %>
+                <%= image_tag track.track_image %>  
               </div>
               <div class="track_overview">
                 <h2 class="track_overview_title">
                   <%= link_to track.title, user_track_path(@user, track) %>
                 </h2>
-                <p class='track_overview_description'>
-                  <%= truncate(track.description, length: 260) %>
-                </p>
+                <div class="audio_player">
+                  <%= audio_tag track.track, controls: true, :preload => 'none'%>
+                </div>
                 <div class="edit_delete_btn">
                   <%= link_to "Edit", edit_user_track_path(@user, track) %>
                   <%= link_to "Delete", user_track_path(@user, track), method: :delete %>

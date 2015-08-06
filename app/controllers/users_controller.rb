@@ -1,14 +1,14 @@
 class UsersController < ApplicationController
 
       before_action :find_user, only: [:show , :account]
-      before_action :find_track, only: [:show, :account]
+      before_action :find_tracks, only: [:show, :account, :index]
 
       def index
         @users = User.all.order('created_at DESC').paginate(page: params[:page], per_page: 20)
       end
 
       def show
-        @tracks = track.where(user_id: @user).order("created_at DESC").paginate(page: params[:page], per_page: 10)
+        @tracks = Track.where(user_id: @user).order("created_at DESC").paginate(page: params[:page], per_page: 10)
       end
 
       def account
@@ -24,8 +24,8 @@ class UsersController < ApplicationController
         end
       end
 
-      def find_track
-        @tracks = track.where(user_id: @user).paginate(page: params[:page], per_page: 10)
+      def find_tracks
+        @tracks = Track.where(user_id: @user).paginate(page: params[:page], per_page: 10)
       end
 
 end

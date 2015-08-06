@@ -6,11 +6,11 @@ class TracksController < ApplicationController
       before_action :find_track, only: [:show, :edit, :update, :destroy]
 
       # def index
-      #   @tracks = track.all.order('created_at DESC')
+      #   @tracks = Track.all.order('created_at DESC')
       # end
 
       def show
-        @tracks = track.where(user_id: @user).reject { |track| track.id == @track.id}
+        @tracks = Track.where(user_id: @user).reject { |track| track.id == @track.id}
       end
 
       def new
@@ -41,7 +41,6 @@ class TracksController < ApplicationController
         end
       end
 
-
       def destroy
         @track.destroy
         redirect_to root_path
@@ -52,7 +51,7 @@ class TracksController < ApplicationController
       private
 
       def track_params
-        params.require(:track).permit(:title, :description, :tracks, :last_updated, :avatar, :mp3_file_name, :mp3_content_type, :mp3_file_size, :mp3_updated_at, :mp3)
+        params.require(:track).permit(:title, :description, :last_updated, :avatar, :track)
       end
 
       def find_user
@@ -60,7 +59,7 @@ class TracksController < ApplicationController
       end
 
       def find_track
-        @track = track.find(params[:id])
+        @track = Track.find(params[:id])
       end
 
       def require_permission

@@ -1,2 +1,2 @@
-module tracksHelper
+module TracksHelper
 end
