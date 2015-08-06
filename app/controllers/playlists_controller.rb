@@ -19,6 +19,7 @@ class PlaylistsController < ApplicationController
 
       def create
         @playlist = @user.playlists.new playlist_params
+
         if @playlist.save
           redirect_to user_playlist_path(@user, @playlist)
         else 

@@ -14,8 +14,6 @@ class UsersController < ApplicationController
       def account
       end
 
-
-
       private
 
       def find_user

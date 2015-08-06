@@ -23,7 +23,7 @@
         <h2 class ="playlist_show_title" ><%= @playlist.title%></h2>
         <p class ="playlist_show_description"><%= @playlist.description %></p>
 
-        <%= render 'playlists/player' %>
+        <%= render partial: 'playlists/player', locals: {playlist: @playlist} %>
       </div> 
     
       <div class="playlist_show_index">

@@ -34,7 +34,7 @@
                 </h2>
                 <p class='playlist_overview_description'>
                   <%= truncate(playlist.description, length: 260) %>
-                  <%#= render 'playlists/player' %>
+                  <%= render partial: 'playlists/player', locals: { playlist: playlist} %>
                 </p>
               </div>
             </li>

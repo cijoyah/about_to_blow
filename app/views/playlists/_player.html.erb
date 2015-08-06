@@ -1,7 +1,7 @@
-<div id="jquery_jplayer_1" class="jp-jplayer"></div>
-<div id="jp_container_1" class="jp-audio">
+<div id="jquery_jplayer_<%= playlist.id %>" class="jp-jplayer"></div>
+<div id="jp_container_<%= playlist.id %>" class="jp-audio">
   <div class="jp-type-single">
-    <div class="jp-gui jp-interface">
+    <div class="jp-gui jp-interface" id="jquery_jplayer_interface_<%= playlist.id %>">
       <ul class="jp-controls">
         <li><a href="javascript:;" class="jp-play" tabindex="1"><i class="fa fa-play"></i></a></li>
         <li><a href="javascript:;" class="jp-pause" tabindex="1"><i class="fa fa-pause"></i></a></li>
@@ -33,12 +33,15 @@
 
 <script>
   $(document).ready(function(){
-    $("#jquery_jplayer_1").jPlayer({
+    playlist_id = <%= playlist.id %>
+
+    $('#jquery_jplayer_' + playlist_id).jPlayer({
       ready: function () {
         $(this).jPlayer("setMedia", {
-          mp3: "<%= @playlist.mp3.url %>",
+          mp3: "<%= playlist.mp3.url %>",
         });
       },
+      cssSelectorAncestor: '#jquery_jplayer_interface_' + playlist_id,
       swfPath: "/js",
       supplied: "mp3"
     });
