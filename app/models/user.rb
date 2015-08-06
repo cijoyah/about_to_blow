@@ -11,7 +11,6 @@ class User < ActiveRecord::Base
     :medium => "300x300#", 
     :thumb => "100x100#" 
     }, 
-    :default_url => "/images/:style/missing.png",
     :storage => :s3,
     :bucket => ENV['S3_BUCKET_NAME'],
     :s3_credentials => {
