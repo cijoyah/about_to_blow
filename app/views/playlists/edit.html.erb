@@ -5,14 +5,14 @@
         <h1> Account </h1>
         <div class="account_links">
           <ul>
-            <li><%= link_to "Playlists", root_path %></li>
-            <li class="current_page"><%= link_to "Edit Playlist" %></li>
+            <li><%= link_to "tracks", root_path %></li>
+            <li class="current_page"><%= link_to "Edit track" %></li>
             <li><%= link_to "Settings", edit_user_registration_path %></li>
             <li><%= link_to "Profile", user_path(current_user) %></li>
           </ul>
         </div>
       </div>
-      <%= render 'playlists/form' %>
+      <%= render 'tracks/form' %>
     </div>
   </div>
 </div>

@@ -1,8 +1,8 @@
-<div class="lightgrey_background_playlist">
+<div class="lightgrey_background_track">
   <div class="wrapper_skinny nav_drop">
     
-    <div class="playlist_show">
-      <div class="playlist_show_banner">
+    <div class="track_show">
+      <div class="track_show_banner">
 
         <div class="breadcrumb">
         <%= link_to users_path do %>
@@ -10,35 +10,35 @@
           <span> / </span>
           <%= link_to @user.username, user_path(@user) %>
           <span> / </span>
-          <%= @playlist.title %>
+          <%= @track.title %>
         <% end %>
         </div>
 
-        <div class="playlist_show_image">
-          <%= image_tag @playlist.avatar.url(:medium) %>
+        <div class="track_show_image">
+          <%= image_tag @track.avatar.url(:medium) %>
         </div>
 
-        <h1 class="playlist_show_user_name_location"> Hayoji <span> </span> Camden, London UK </h1>
+        <h1 class="track_show_user_name_location"> Hayoji <span> </span> Camden, London UK </h1>
 
-        <h2 class ="playlist_show_title" ><%= @playlist.title%></h2>
-        <p class ="playlist_show_description"><%= @playlist.description %></p>
+        <h2 class ="track_show_title" ><%= @track.title%></h2>
+        <p class ="track_show_description"><%= @track.description %></p>
 
-        <%= render partial: 'playlists/player', locals: {playlist: @playlist} %>
+        <%= render partial: 'tracks/player', locals: {track: @track} %>
       </div> 
     
-      <div class="playlist_show_index">
+      <div class="track_show_index">
         <ul class="cf">
-          <% @playlists.each do |playlist| %>
+          <% @tracks.each do |track| %>
             <li class="cf">
-              <div class="playlist_thumbnail">
-                <%= image_tag playlist.avatar.url(:medium) %>  
+              <div class="track_thumbnail">
+                <%= image_tag track.avatar.url(:medium) %>  
               </div>
-              <div class="playlist_overview">
-                <h2 class="playlist_overview_title">
-                  <%= link_to playlist.title, user_playlist_path(@user, playlist) %>
+              <div class="track_overview">
+                <h2 class="track_overview_title">
+                  <%= link_to track.title, user_track_path(@user, track) %>
                 </h2>
-                <p class='playlist_overview_description'>
-                  <%= truncate(playlist.description, length: 260) %>
+                <p class='track_overview_description'>
+                  <%= truncate(track.description, length: 260) %>
                 </p>
               </div>
             </li>

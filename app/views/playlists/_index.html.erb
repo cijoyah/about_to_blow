@@ -1,21 +1,21 @@
-<div class="user_show_playlist">
+<div class="user_show_track">
   <ul class="cf">
-    <% @playlists.each do |playlist| %>
+    <% @tracks.each do |track| %>
       <li class="cf">
-        <div class="playlist_thumbnail">
-          <%= image_tag playlist.avatar.url(:medium) %>  
+        <div class="track_thumbnail">
+          <%= image_tag track.avatar.url(:medium) %>  
         </div>
-        <div class="playlist_overview">
-          <h2 class="playlist_overview_title">
-            <%= link_to playlist.title, user_playlist_path(@user, playlist) %>
+        <div class="track_overview">
+          <h2 class="track_overview_title">
+            <%= link_to track.title, user_track_path(@user, track) %>
           </h2>
-          <p class='playlist_overview_description'>
-            <%= truncate(playlist.description, length: 260) %>
+          <p class='track_overview_description'>
+            <%= truncate(track.description, length: 260) %>
           </p>
         </div>
       </li>
     <% end %>
   </ul>
 </div>
-<%= will_paginate @playlists %>
+<%= will_paginate @tracks %>
 

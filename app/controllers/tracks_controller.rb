@@ -1,27 +1,27 @@
-class PlaylistsController < ApplicationController
+class TracksController < ApplicationController
 
       before_action :authenticate_user!, except: [:show]
       before_filter :require_permission, except: [:show]
       before_action :find_user
-      before_action :find_playlist, only: [:show, :edit, :update, :destroy]
+      before_action :find_track, only: [:show, :edit, :update, :destroy]
 
       # def index
-      #   @playlists = Playlist.all.order('created_at DESC')
+      #   @tracks = track.all.order('created_at DESC')
       # end
 
       def show
-        @playlists = Playlist.where(user_id: @user).reject { |playlist| playlist.id == @playlist.id}
+        @tracks = track.where(user_id: @user).reject { |track| track.id == @track.id}
       end
 
       def new
-        @playlist = @user.playlists.new
+        @track = @user.tracks.new
       end
 
       def create
-        @playlist = @user.playlists.new playlist_params
+        @track = @user.tracks.new track_params
 
-        if @playlist.save
-          redirect_to user_playlist_path(@user, @playlist)
+        if @track.save
+          redirect_to user_track_path(@user, @track)
         else 
           render 'new'
         end
@@ -34,8 +34,8 @@ class PlaylistsController < ApplicationController
       end
 
       def update
-        if @playlist.update playlist_params
-          redirect_to user_playlist_path(@user, @playlist), notice: "Playlist was succesfully updated!"
+        if @track.update track_params
+          redirect_to user_track_path(@user, @track), notice: "track was succesfully updated!"
         else
           render 'edit'
         end
@@ -43,7 +43,7 @@ class PlaylistsController < ApplicationController
 
 
       def destroy
-        @playlist.destroy
+        @track.destroy
         redirect_to root_path
       end
 
@@ -51,16 +51,16 @@ class PlaylistsController < ApplicationController
 
       private
 
-      def playlist_params
-        params.require(:playlist).permit(:title, :description, :tracks, :last_updated, :avatar, :mp3_file_name, :mp3_content_type, :mp3_file_size, :mp3_updated_at, :mp3)
+      def track_params
+        params.require(:track).permit(:title, :description, :tracks, :last_updated, :avatar, :mp3_file_name, :mp3_content_type, :mp3_file_size, :mp3_updated_at, :mp3)
       end
 
       def find_user
         @user = User.find(params[:user_id])
       end
 
-      def find_playlist
-        @playlist = Playlist.find(params[:id])
+      def find_track
+        @track = track.find(params[:id])
       end
 
       def require_permission

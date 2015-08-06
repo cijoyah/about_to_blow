@@ -4,7 +4,7 @@ Rails.application.routes.draw do
   
 
   resources :users, only: [:index, :show] do
-    resources :playlists 
+    resources :tracks 
   end
 
   authenticated :user do
