@@ -5,10 +5,10 @@
         <h1> Account </h1>
         <div class="account_links">
           <ul>
-            <li><%= link_to "tracks", root_path %></li>
-            <li><%= link_to "New track", new_user_track_path(@user)  %></li>
+            <li><%= link_to "Tracks", root_path %></li>
+            <li><%= link_to "New Track", new_user_track_path(@user)  %></li>
             <li class="current_page" ><%= link_to "Settings" %></li>
-            <li><%= link_to "Profile", user_path(current_user) %></li>
+            <li><%= link_to "View Profile", user_path(current_user) %></li>
           </ul>
         </div>
       </div>
@@ -40,6 +40,11 @@
           <div class="field">
             <%= f.label :location %><br />
             <%= f.text_field :location %>
+          </div>
+
+          <div class="field">
+            <%= f.label :bio %><br/>
+            <%= f.text_field :bio %>
           </div>
 
           <div class="field">

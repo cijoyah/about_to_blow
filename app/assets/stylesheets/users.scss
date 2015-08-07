@@ -19,17 +19,19 @@
         }
         .user_details {
           .user_name {
-            color: blue;
+            color: $orange;
           }
         }
       }
       img {
         width: 100%;
         max-width: 100%;
+        border-radius: 5%;
       }
       .user_details {
         padding: .5rem 0 0 0;
         .user_name {
+          // text-transform: uppercase;
           margin: 0;
           font-size: 1rem;
           font-weight: 700;
@@ -44,44 +46,64 @@
   .user_show_banner {
     background-image: url("https://s3-eu-west-1.amazonaws.com/about-to-blow/app_images/blue_pattern.png");
     background-size: cover;
+    padding: 2rem;
+    .page_title {
     text-align: center;
-    padding: 1.8rem 0rem 3rem 0rem;
-    .user_show_username {
-      font-size: 2.5rem;
-      font-weight: 300;
-      color: white;
-      margin: 0;
+    text-transform: uppercase;
+
     }
-    .user_show_location {
-      margin: 1.1rem 0 2rem;
-    }
-    .playlist_show_bio {
-      margin: 0 15% 1rem;
-      text-align: center;
-      background-color: rgba(255, 255, 255, 0.3);
-      padding: 0.2rem; 
-    }
-    .user_show_banner_links {
-      margin-top: 1.5rem;
-      .user_show_banner_link {
-        text-decoration: none;
-        font-size: .7rem; 
+    img {
+      border-radius: 5%;
+      // display: inline-block;
+      float: left;
+      }
+    .user-banner-content {
+      // display: inline-block;
+      float: left;
+      margin-left: 2rem;
+      .user_show_username {
         text-transform: uppercase;
-        text-weight: 700;
-        text-align: center;
+        font-size: 2.5rem;
+        font-weight: 300;
         color: white;
-        display: inline;
-        background: $darkgrey;
-        border-radius: 2rem;
-        padding: .5rem 1rem;
-        margin: .5rem 1rem; 
-        &:hover {
-          color: $orange;
+        margin: 0;
+        }
+      .user_show_location {
+        margin-top: 0.5rem; 
+        }
+      .user_show_bio {
+        // margin: 0 15% 1rem;
+        // text-align: center;
+        // background-color: rgba(255, 255, 255, 0.3);
+        // padding: 0.2rem; 
+        // margin-top: 0.5rem;
+        // max-width: 20%;
+        width: 40rem;
+        }
+      .user_show_banner_links {
+        margin-top: 1rem;
+        .user_show_banner_link {
+          text-decoration: none;
+          font-size: .7rem; 
+          text-transform: uppercase;
+          text-weight: 700;
+          text-align: center;
+          color: white;
+          display: inline;
+          background: $darkgrey;
+          border-radius: 2rem;
+          padding: .5rem 1rem;
+          margin-right: .5rem; 
+          &:hover {
+            color: $orange;
+          }
         }
       }
     }
   }
   .breadcrumb {
+    clear: both;
+
     padding: 0;
     text-align: center;
     margin-top: 1rem;
@@ -96,6 +118,7 @@
     }
   }
   .track_show_index {
+    clear: both;
     padding: 1rem;
     ul {
       list-style: none;
@@ -109,13 +132,13 @@
           float: left;
           margin-right: 1.5%;
           img {
-            width: 10rem;
-            max-width: 100%;
+            border-radius: 5%;
           }
         }
         .track_overview {
           width: 70%;
           float: left;
+          padding: 1rem;
           h2 {
             margin: 0;
           }
@@ -125,6 +148,7 @@
               color: $darkgrey;
               text-decoration: none;
               font-size: 2rem;
+              margin-bottom: 1rem;
               &:hover {
                 // text-decoration: underline;
                 color: $orange;
@@ -217,6 +241,7 @@
 .edit_delete_btn {
   font-weight:  400;
   font-size: 1rem;
+  padding: 1rem 0;
   a {
     color: $orange;
     margin-right: 1rem;

@@ -2,14 +2,19 @@
   <div class="wrapper_skinny nav_drop">
     
     <div class="user_show">
-      <div class="user_show_banner">
-        <%= image_tag @user.avatar %>
-        <h1 class="user_show_username"><%= @user.username %></h1>
-        <div class="user_show_location"><%= @user.location %></div>
-        <div class="user_show_banner_links">
-          <a href="follow" class="user_show_banner_link">Follow</a>
-          <a href="follow" class="user_show_banner_link">Link</a>
-          <a href="follow" class="user_show_banner_link">Button</a>
+      <div class="cf user_show_banner">
+        <!-- div class="user_show_image"> -->
+        <%= image_tag @user.avatar.large_fill.url %>
+        <!-- </div> -->
+        <div class="user-banner-content">
+          <h1 class="user_show_username"><%= @user.username %></h1>
+          <div class="user_show_location"><%= @user.location %></div>
+          <p class="user_show_bio"><%= @user.bio %></p>
+          <div class="user_show_banner_links">
+            <a href="follow" class="user_show_banner_link">Follow</a>
+            <a href="follow" class="user_show_banner_link">Link</a>
+            <a href="follow" class="user_show_banner_link">Button</a>
+          </div>
         </div>
       </div>
 
@@ -25,13 +30,16 @@
         <ul class="cf">
           <% @tracks.each do |track| %>
             <li class="cf">
-              <div class="track_thumbnail">
-                <%= image_tag track.track_image %>  
+              <div class="track_thumbnail"> 
+                <%= image_tag track.track_image.medium_fill.url %>  
               </div>
               <div class="track_overview">
                 <h2 class="track_overview_title">
                   <%= link_to track.title, user_track_path(@user, track) %>
                 </h2>
+                <p class='playlist_overview_description'>
+                  <%= truncate(track.description, length: 260) %>
+                </p>
                 <div class="audio_player">
                   <%= audio_tag track.track, controls: true, :preload => 'none'%>
                 </div>

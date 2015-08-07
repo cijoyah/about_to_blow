@@ -15,12 +15,12 @@
         </div>
 
         <div class="track_show_image">
-          <%= image_tag @track.track_image %>
+          <%= image_tag @track.track_image.url %>
         </div>
 
-        <h1 class="track_show_user_name_location"> Hayoji <span> </span> Camden, London UK </h1>
+        <!-- <h1 class="track_show_user_name_location"> Hayoji <span> </span> Camden, London UK </h1> -->
 
-        <h2 class ="track_show_title" ><%= @track.title%></h2>
+        <h2 class ="track_show_title" ><%= @track.title %></h2>
         <p class ="track_show_description"><%= @track.description %></p>
 
         <%= audio_tag @track.track, controls: true, :preload => 'none'%>
@@ -32,7 +32,7 @@
           <% @tracks.each do |track| %>
             <li class="cf">
               <div class="track_thumbnail">
-                <%= image_tag track.track_image %>  
+                <%= image_tag track.track_image.medium_fill.url %>    
               </div>
               <div class="track_overview">
                 <h2 class="track_overview_title">

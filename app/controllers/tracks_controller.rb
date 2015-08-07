@@ -51,7 +51,7 @@ class TracksController < ApplicationController
       private
 
       def track_params
-        params.require(:track).permit(:title, :description, :last_updated, :avatar, :track)
+        params.require(:track).permit(:title, :description, :last_updated, :track_image, :track)
       end
 
       def find_user

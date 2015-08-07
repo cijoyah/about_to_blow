@@ -1,19 +1,29 @@
-<div id="users" class="cf nav_drop">
-  <div class="wrapper_skinny">
-    <ul class="cf">
-      <h1 class='page_title'>User Index Page</h1>
-      <% @users.each do |user| %>
-        <%= link_to user do %>
-          <li>
-            <%= image_tag user.avatar %>
-            <div class="user_details">
-              <h2 class="user_name"><%= user.username %></h2>
-            </div>
-          </li>
-        <% end %>
-      <% end %>
-    </ul>
+<%= render 'layouts/main_nav' %>
+<div class="lightgrey_background">
+  <div class="wrapper_skinny nav_drop">
+    <div class="user_show">
+      <div class="user_show_banner account_banner">
+        <h1 class="page_title"> Explore Contributors</h1>
+      </div>
+
+      <div id="users" class="cf nav_drop">
+        <div class="wrapper_skinny">
+          <ul class="cf">
+            <% @users.each do |user| %>
+              <%= link_to user do %>
+                <li>
+                  <%= image_tag user.avatar.medium_fill.url %>
+                  <div class="user_details">
+                    <h2 class="user_name"><%= user.username %></h2>
+                  </div>
+                </li>
+              <% end %>
+            <% end %>
+          </ul>
+        </div>
+      </div>
+      <%#= render 'layouts/pagination' %>
+      <%= will_paginate @users %>
+    </div>
   </div>
 </div>
-<%#= render 'layouts/pagination' %>
-<%= will_paginate @users %>
