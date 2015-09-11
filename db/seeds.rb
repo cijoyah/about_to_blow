@@ -261,3 +261,44 @@ user_23 = User.create(  first_name: 'Zoe',
                         location: 'London',
                         created_at: Time.now, 
                         last_sign_in_at: Time.now)
+
+
+track_1 = Track.create( title: "Too many woes",
+                        description: "Literally try-hard slow-carb before they sold out. Pitchfork chia vegan literally. McSweeney's polaroid fixie, banjo vegan Godard beard ennui heirloom chambray Kickstarter Vice. Before they sold out raw denim Godard, tote bag Marfa bitters you probably haven't heard of them fanny pack single-origin coffee chia asymmetrical Bushwick cornhole."
+
+track_2 = Track.create( title: "Money Trees",
+                        description: "Literally try-hard slow-carb before they sold out. Pitchfork chia vegan literally. McSweeney's polaroid fixie, banjo vegan Godard beard ennui heirloom chambray Kickstarter Vice. Before they sold out raw denim Godard, tote bag Marfa bitters you probably haven't heard of them fanny pack single-origin coffee chia asymmetrical Bushwick cornhole.")
+
+track_3 = Track.create( title: "Literally No",
+                        description: "Literally try-hard slow-carb before they sold out. Pitchfork chia vegan literally. McSweeney's polaroid fixie, banjo vegan Godard beard ennui heirloom chambray Kickstarter Vice. Before they sold out raw denim Godard, tote bag Marfa bitters you probably haven't heard of them fanny pack single-origin coffee chia asymmetrical Bushwick cornhole.")
+
+track_4 = Track.create( title: "Options",
+                        description: "Literally try-hard slow-carb before they sold out. Pitchfork chia vegan literally. McSweeney's polaroid fixie, banjo vegan Godard beard ennui heirloom chambray Kickstarter Vice. Before they sold out raw denim Godard, tote bag Marfa bitters you probably haven't heard of them fanny pack single-origin coffee chia asymmetrical Bushwick cornhole.")
+
+track_5 = Track.create( title: "Flowdo",
+                        description: "Literally try-hard slow-carb before they sold out. Pitchfork chia vegan literally. McSweeney's polaroid fixie, banjo vegan Godard beard ennui heirloom chambray Kickstarter Vice. Before they sold out raw denim Godard, tote bag Marfa bitters you probably haven't heard of them fanny pack single-origin coffee chia asymmetrical Bushwick cornhole.")
+
+track_6 = Track.create( title: "Crisp Tide ",
+                        description: "Literally try-hard slow-carb before they sold out. Pitchfork chia vegan literally. McSweeney's polaroid fixie, banjo vegan Godard beard ennui heirloom chambray Kickstarter Vice. Before they sold out raw denim Godard, tote bag Marfa bitters you probably haven't heard of them fanny pack single-origin coffee chia asymmetrical Bushwick cornhole.")
+
+track_7 = Track.create( title: "Heart Attack",
+                        description: "Literally try-hard slow-carb before they sold out. Pitchfork chia vegan literally. McSweeney's polaroid fixie, banjo vegan Godard beard ennui heirloom chambray Kickstarter Vice. Before they sold out raw denim Godard, tote bag Marfa bitters you probably haven't heard of them fanny pack single-origin coffee chia asymmetrical Bushwick cornhole.")
+
+track_8 = Track.create( title: "Bethany Rose",
+                        description: "Literally try-hard slow-carb before they sold out. Pitchfork chia vegan literally. McSweeney's polaroid fixie, banjo vegan Godard beard ennui heirloom chambray Kickstarter Vice. Before they sold out raw denim Godard, tote bag Marfa bitters you probably haven't heard of them fanny pack single-origin coffee chia asymmetrical Bushwick cornhole.")
+
+track_9 = Track.create( title: "Wood Stilts",
+                        description: "Literally try-hard slow-carb before they sold out. Pitchfork chia vegan literally. McSweeney's polaroid fixie, banjo vegan Godard beard ennui heirloom chambray Kickstarter Vice. Before they sold out raw denim Godard, tote bag Marfa bitters you probably haven't heard of them fanny pack single-origin coffee chia asymmetrical Bushwick cornhole.")
+
+track_10 = Track.create( title: "So it is",
+                        description: "Literally try-hard slow-carb before they sold out. Pitchfork chia vegan literally. McSweeney's polaroid fixie, banjo vegan Godard beard ennui heirloom chambray Kickstarter Vice. Before they sold out raw denim Godard, tote bag Marfa bitters you probably haven't heard of them fanny pack single-origin coffee chia asymmetrical Bushwick cornhole.")
+
+track_11 = Track.create( title: "Harder you try",
+                        description: "Literally try-hard slow-carb before they sold out. Pitchfork chia vegan literally. McSweeney's polaroid fixie, banjo vegan Godard beard ennui heirloom chambray Kickstarter Vice. Before they sold out raw denim Godard, tote bag Marfa bitters you probably haven't heard of them fanny pack single-origin coffee chia asymmetrical Bushwick cornhole.")
+
+track_12 = Track.create( title: "Push Pull",
+                        description: "Literally try-hard slow-carb before they sold out. Pitchfork chia vegan literally. McSweeney's polaroid fixie, banjo vegan Godard beard ennui heirloom chambray Kickstarter Vice. Before they sold out raw denim Godard, tote bag Marfa bitters you probably haven't heard of them fanny pack single-origin coffee chia asymmetrical Bushwick cornhole.")
+
+track_13 = Track.create( title: "Dial tune",
+                        description: "Literally try-hard slow-carb before they sold out. Pitchfork chia vegan literally. McSweeney's polaroid fixie, banjo vegan Godard beard ennui heirloom chambray Kickstarter Vice. Before they sold out raw denim Godard, tote bag Marfa bitters you probably haven't heard of them fanny pack single-origin coffee chia asymmetrical Bushwick cornhole.")
+  )
