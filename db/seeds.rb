@@ -483,7 +483,7 @@ track_37 = Track.create( title: "Dial tune",
                         description: "Literally try-hard slow-carb before they sold out. Pitchfork chia vegan literally. McSweeney's polaroid fixie, banjo vegan Godard beard ennui heirloom chambray Kickstarter Vice. Before they sold out raw denim Godard, tote bag Marfa bitters you probably haven't heard of them fanny pack single-origin coffee chia asymmetrical Bushwick cornhole.",
                         user_id: 15,
                         track: (File.open(File.join(Rails.root, "app/assets/tracks/atb.mp3"))),
-                        track_image: (File.open(File.join(Rails.root, "app/assets/images/track_images/003.jpg")))
+                        track_image: (File.open(File.join(Rails.root, "app/assets/images/track_images/003.jpg"))))
 
 track_38 = Track.create( title: "Too many woes",
                         description: "Literally try-hard slow-carb before they sold out. Pitchfork chia vegan literally. McSweeney's polaroid fixie, banjo vegan Godard beard ennui heirloom chambray Kickstarter Vice. Before they sold out raw denim Godard, tote bag Marfa bitters you probably haven't heard of them fanny pack single-origin coffee chia asymmetrical Bushwick cornhole.",
