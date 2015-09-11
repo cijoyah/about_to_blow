@@ -264,7 +264,7 @@ user_23 = User.create(  first_name: 'Zoe',
 
 
 track_1 = Track.create( title: "Too many woes",
-                        description: "Literally try-hard slow-carb before they sold out. Pitchfork chia vegan literally. McSweeney's polaroid fixie, banjo vegan Godard beard ennui heirloom chambray Kickstarter Vice. Before they sold out raw denim Godard, tote bag Marfa bitters you probably haven't heard of them fanny pack single-origin coffee chia asymmetrical Bushwick cornhole."
+                        description: "Literally try-hard slow-carb before they sold out. Pitchfork chia vegan literally. McSweeney's polaroid fixie, banjo vegan Godard beard ennui heirloom chambray Kickstarter Vice. Before they sold out raw denim Godard, tote bag Marfa bitters you probably haven't heard of them fanny pack single-origin coffee chia asymmetrical Bushwick cornhole.")
 
 track_2 = Track.create( title: "Money Trees",
                         description: "Literally try-hard slow-carb before they sold out. Pitchfork chia vegan literally. McSweeney's polaroid fixie, banjo vegan Godard beard ennui heirloom chambray Kickstarter Vice. Before they sold out raw denim Godard, tote bag Marfa bitters you probably haven't heard of them fanny pack single-origin coffee chia asymmetrical Bushwick cornhole.")
